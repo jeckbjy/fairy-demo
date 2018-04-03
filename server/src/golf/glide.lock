@@ -1,0 +1,6 @@
+hash: 98b8a1d42ec456c45ad584be943e36eeed5e678b2ec26cffa2aab1d609359521
+updated: 2018-04-03T11:37:03.156001+08:00
+imports:
+- name: github.com/jeckbjy/fairy
+  version: 53472fda0d1d95ddace54202d0c86afff10bef95
+testImports: []

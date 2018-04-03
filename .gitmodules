@@ -1,0 +1,6 @@
+[submodule "tools/table-gen"]
+	path = tools/table-gen
+	url = https://jeckbjy:bjy201314@github.com/jeckbjy/tool-table-gen.git
+[submodule "tools/proto-gen"]
+	path = tools/proto-gen
+	url = https://jeckbjy:bjy201314@github.com/jeckbjy/tool-proto-gen.git
