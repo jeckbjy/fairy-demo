@@ -10,3 +10,9 @@
 [submodule "tools/tool-table-gen"]
 	path = tools/tool-table-gen
 	url = https://github.com/jeckbjy/tool-table-gen.git
+[submodule "tools/table-gen/tool-table-gen"]
+	path = tools/table-gen/tool-table-gen
+	url = https://github.com/jeckbjy/tool-table-gen.git
+[submodule "tools/proto-gen/tool-proto-gen"]
+	path = tools/proto-gen/tool-proto-gen
+	url = https://github.com/jeckbjy/tool-proto-gen.git
