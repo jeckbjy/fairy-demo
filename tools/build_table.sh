@@ -1,4 +1,3 @@
 #!/bin/sh
 
-cd ./table-gen
-./build.sh
+./table-gen/build.sh

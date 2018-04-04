@@ -1,4 +1,3 @@
 #!/bin/sh
 
-cd ./proto-gen
-./build.sh
+./proto-gen/build.sh

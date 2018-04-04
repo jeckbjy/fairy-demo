@@ -1,10 +1,19 @@
 #!/bin/sh
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+cd $DIR
 # build proto msg
-SERVER_PATH=${DIR}/../../server/src/golf/comm/msg
-CLIENT_PATH=${DIR}/../../client/common/msg
-protoc --go_out=$SERVER_PATH --js_out=$CLIENT_PATH protos/*.proto
+# SERVER_PATH=../../server/src/golf/comm/msg
+# CLIENT_PATH=../../client/common/msg
+SERVER_OUT=./build/server
+CLIENT_OUT=./build/client
+FAIRY_OUT=./build/fairy
 
-# build proto mgr
-${DIR}/tool-proto-gen/build.sh 
+mkdir -p $SERVER_OUT
+mkdir -p $CLIENT_OUT
+mkdir -p $FAIRY_OUT
+
+PLUGIN_PATH=./tool-proto-gen/protoc-gen-fairy
+protoc  --go_out=$SERVER_OUT --js_out=import_style=commonjs,binary:$CLIENT_OUT --plugin=$PLUGIN_PATH --fairy_out=js,go:$FAIRY_OUT  --proto_path=protos protos/*.proto
+
+# copy fairy

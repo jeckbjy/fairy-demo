@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package msg;
+
+message AuthReq
+{
+    string account = 1;
+    string password = 2;
+}
+
+message AuthRsp
+{
+}
+
+message LoginReq
+{
+    uint64 uid = 1;
+}
+
+message LoginRsp
+{
+}

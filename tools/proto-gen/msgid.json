@@ -1,0 +1,6 @@
+{
+    "AuthReq": 1,
+    "AuthRsp": 2,
+    "LoginReq": 3,
+    "LoginRsp": 4
+}
