@@ -1,3 +1,3 @@
 #!/bin/sh
 
-./proto-gen/build.sh
+./proto-gen/build.sh $*

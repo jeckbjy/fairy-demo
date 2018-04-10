@@ -2,6 +2,15 @@
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 cd $DIR
+
+REBUILD=$1
+
+# rebuild msgid
+if [ $REBUILD ]; then
+    echo "rebuild msgid"
+    rm -f ./msgid.json
+fi 
+
 # build proto msg
 # SERVER_PATH=../../server/src/golf/comm/msg
 # CLIENT_PATH=../../client/common/msg
