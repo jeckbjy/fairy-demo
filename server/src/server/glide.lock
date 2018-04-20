@@ -1,0 +1,8 @@
+hash: 2f064bbfe02a43ffe7b5537cbbcb59fe2d475e82396f74e909e0ad65e852a4a6
+updated: 2018-04-21T02:33:10.47769+08:00
+imports:
+- name: github.com/jeckbjy/fairy
+  version: 53472fda0d1d95ddace54202d0c86afff10bef95
+- name: gopkg.in/yaml.v2
+  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
+testImports: []

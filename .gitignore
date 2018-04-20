@@ -12,7 +12,9 @@
 
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
-vendor
+vendor/
+server/bin/golf
+server/pkg/
 
 ./tools/table-gen/build/
 ./tools/table-gen/conf.js

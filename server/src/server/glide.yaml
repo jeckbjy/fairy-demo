@@ -1,0 +1,5 @@
+package: server
+import:
+- package: github.com/jeckbjy/fairy
+- package: gopkg.in/yaml.v2
+  version: ~2.2.1
