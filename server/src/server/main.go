@@ -2,18 +2,19 @@ package main
 
 import (
 	"server/center"
+	"server/comm/conf"
 
 	"github.com/jeckbjy/fairy"
 )
 
 func main() {
-	switch cfg.Mode {
-	case cfg.ModeCenter:
+	switch conf.Mode {
+	case conf.ModeCenter:
 		center.Start()
 		break
-	case cfg.ModeGate:
+	case conf.ModeGate:
 		break
-	case cfg.ModeHall:
+	case conf.ModeHall:
 		break
 	}
 
