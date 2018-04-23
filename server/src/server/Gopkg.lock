@@ -6,8 +6,10 @@
   name = "github.com/jeckbjy/fairy"
   packages = [
     ".",
+    "log",
     "util",
-    "util/sonyflake"
+    "util/sonyflake",
+    "util/terminal"
   ]
   revision = "2ebdf8382fab4d6d79851bd603309427a60e5eb7"
 
@@ -20,6 +22,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "ea80b8167af4949da00560be501e76b040e320c9775761a4936eb7931f7d846d"
+  inputs-digest = "f2db25e34ae302f3d74e56de8efd2f09e955fa51e4715ff62713ab4e30b7be16"
   solver-name = "gps-cdcl"
   solver-version = 1

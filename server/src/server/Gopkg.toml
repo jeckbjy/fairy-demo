@@ -28,7 +28,7 @@ required = ["github.com/jeckbjy/fairy", "gopkg.in/yaml.v2"]
 
 [prune]
   go-tests = true
-  unused-packages = true
+  # unused-packages = true
 
 [[constraint]]
   branch = "master"
