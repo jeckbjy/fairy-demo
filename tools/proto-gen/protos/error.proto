@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package msg;
+
+enum Error 
+{
+    ErrOk = 0;
+    ErrFail = 1;
+
+    ErrBadAccount  = 10;
+    ErrBadPassword = 11;
+}

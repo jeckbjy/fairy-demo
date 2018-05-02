@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package msg;
+
+// 请求消息注册列表,用于hall,connector转发到对应服务器
+message HandlerDictReq
+{
+
+}
+
+message HandlerDictRsp
+{
+    string server_id = 1;
+    repeated int32 msgid = 2;
+}

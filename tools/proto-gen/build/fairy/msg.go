@@ -1,22 +1,21 @@
 // This file is generated automatically, DO NOT modify it manually!!! 
 package msg
 import (
-    "github.com/name5566/leaf/network/protobuf"
-    "github.com/golang/protobuf/proto"
+    "github.com/jeckbjy/fairy"
 )
 
-var (
-    Processor = protobuf.NewProcessor()
+const (
+    MsgId_AuthReq = 1
+    MsgId_AuthRsp = 2
+    MsgId_LoginReq = 3
+    MsgId_LoginRsp = 4
+    
 )
-
-func register(msgid int32, msgobj proto.Message) {
-    Processor.RegisterEx(uint16(msgid), msgobj)
-}
 
 func init() {
-    register(1, &AuthReq{})
-    register(2, &AuthRsp{})
-    register(3, &LoginReq{})
-    register(4, &LoginRsp{})
+    fairy.RegisterMessage(&AuthReq{}, MsgId_AuthReq)
+    fairy.RegisterMessage(&AuthRsp{}, MsgId_AuthRsp)
+    fairy.RegisterMessage(&LoginReq{}, MsgId_LoginReq)
+    fairy.RegisterMessage(&LoginRsp{}, MsgId_LoginRsp)
     
 }

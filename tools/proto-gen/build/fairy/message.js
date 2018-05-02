@@ -6,5 +6,7 @@ var global = Function("return this")();
 
 // exports messages
 
+goog.object.extend(exports,require("./error_pb"))
+
 goog.object.extend(exports,require("./login_pb"))
 

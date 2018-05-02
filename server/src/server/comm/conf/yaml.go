@@ -7,7 +7,6 @@ import (
 	"os"
 	"strings"
 
-	"github.com/jeckbjy/fairy/log"
 	yaml "gopkg.in/yaml.v2"
 )
 
@@ -19,10 +18,11 @@ func init() {
 	debug := flag.Bool("d", false, "debug")
 	version := flag.String("v", "", "version")
 	cwd := flag.String("w", "", "work dir")
+	// service := flag.String("s", "all", "services")
 
 	flag.Parse()
 
-	Mode = parseMode(*mode)
+	Mode = *mode
 	Env = *env
 	Port = *port
 	Debug = *debug
@@ -45,24 +45,11 @@ func init() {
 	loadConfig("server.yaml")
 }
 
-func parseMode(s string) ModeType {
-	switch s {
-	case "center":
-		return ModeCenter
-	case "gate":
-		return ModeGate
-	case "hall":
-		return ModeHall
-	}
-
-	return ModeNone
-}
-
 func loadConfig(name string) {
 	file := GetPath(name)
 	data, err := ioutil.ReadFile(file)
 	if err != nil {
-		log.Debug("load yaml conf fail,%+v", err)
+		// log.Debug("load yaml conf fail,%+v", err)
 		return
 	}
 

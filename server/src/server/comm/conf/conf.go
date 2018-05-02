@@ -1,19 +1,26 @@
 package conf
 
-type ModeType int
-
 const (
-	ModeNone ModeType = iota
-	ModeCenter
-	ModeGate
-	ModeHall
+	ModeCenter  = "center"
+	ModeGate    = "gate"
+	ModeHall    = "hall"
+	ModeService = "service"
 )
 
 const (
 	EnvProd = "prod"
 )
 
-var Mode ModeType
+var Conf struct {
+	Mode    string
+	Env     string
+	Port    int
+	Debug   bool
+	Version string
+	WorkDir string
+}
+
+var Mode string
 var Env string
 var Port int
 var Debug bool

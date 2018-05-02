@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var error_pb = require('./error_pb.js');
 goog.exportSymbol('proto.msg.AuthReq', null, global);
 goog.exportSymbol('proto.msg.AuthRsp', null, global);
 goog.exportSymbol('proto.msg.LoginReq', null, global);
@@ -231,7 +232,7 @@ proto.msg.AuthRsp.prototype.toObject = function(opt_includeInstance) {
  */
 proto.msg.AuthRsp.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    code: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -268,6 +269,10 @@ proto.msg.AuthRsp.deserializeBinaryFromReader = function(msg, reader) {
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = /** @type {!proto.msg.Error} */ (reader.readEnum());
+      msg.setCode(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -297,6 +302,28 @@ proto.msg.AuthRsp.prototype.serializeBinary = function() {
  */
 proto.msg.AuthRsp.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getCode();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional Error code = 1;
+ * @return {!proto.msg.Error}
+ */
+proto.msg.AuthRsp.prototype.getCode = function() {
+  return /** @type {!proto.msg.Error} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {!proto.msg.Error} value */
+proto.msg.AuthRsp.prototype.setCode = function(value) {
+  jspb.Message.setProto3EnumField(this, 1, value);
 };
 
 
