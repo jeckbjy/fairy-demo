@@ -34,5 +34,4 @@ func main() {
 	srv.Run()
 
 	fairy.WaitExit()
-	srv.Stop()
 }
