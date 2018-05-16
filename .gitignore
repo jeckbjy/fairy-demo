@@ -17,4 +17,4 @@ server/bin/golf
 server/pkg/
 
 ./tools/table-gen/build/
-./tools/table-gen/conf.js
+./tools/table-gen/conf.yaml
