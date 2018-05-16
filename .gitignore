@@ -16,5 +16,5 @@ vendor/
 server/bin/golf
 server/pkg/
 
-./tools/table-gen/build/
-./tools/table-gen/conf.yaml
+tools/table-gen/build/
+tools/table-gen/conf.yaml
